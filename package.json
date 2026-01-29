@@ -1,0 +1,12 @@
+{
+  "name": "wildlife-tracker",
+  "version": "1.0.0",
+  "description": "WEB322 Assignment 1 - Wildlife Sighting Tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
