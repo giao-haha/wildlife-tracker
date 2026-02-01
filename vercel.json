@@ -3,20 +3,15 @@
   "builds": [
     {
       "src": "server.js",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["data/**", "views/**", "public/**"]
+      }
     }
   ],
   "routes": [
     {
-      "src": "^/css/(.*)",
-      "dest": "/public/css/$1"
-    },
-    {
-      "src": "^/images/(.*)",
-      "dest": "/public/images/$1"
-    },
-    {
-      "src": "^(.*)",
+      "src": "/(.*)",
       "dest": "/server.js"
     }
   ]
