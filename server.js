@@ -17,15 +17,15 @@ const { loadSightings } = require("./utils/dataLoader");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 1️⃣ Static middleware
+// Static middleware
 app.use(express.static("public"));
 
-// 2️⃣ Root route
+// Root route
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });
 
-// 3️⃣ API Endpoints
+// API Endpoints
 
 // GET all sightings
 app.get("/api/sightings", async (req, res) => {
